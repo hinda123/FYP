@@ -1,9 +1,14 @@
 package com.example.fyp.service;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import com.example.fyp.model.club.Club;
 import com.example.fyp.model.club.ClubCategory;
+import com.example.fyp.model.club.ClubCheckout;
+import com.example.fyp.util.api.FetchApi;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -22,7 +27,7 @@ public class ClubImp implements ClubService{
     }
 
     @Override
-    public List<Club> listAllClubsByClubCategory(String clubCategory) {
+    public List<Club> listAllClubsByClubCategory(UUID clubCategoryId) {
         List<Club> clubs = new ArrayList<>();
         clubs.add(new Club(UUID.randomUUID(),"Football club",23.00,"des....", "April 2,2022","https://m.media-amazon.com/images/I/51KM6J9JUBL._AC_SL1024_.jpg"));
         clubs.add(new Club(UUID.randomUUID(),"Swimming",21.21,"des....", "April 2,2022","https://m.media-amazon.com/images/I/51KM6J9JUBL._AC_SL1024_.jpg"));
@@ -31,8 +36,12 @@ public class ClubImp implements ClubService{
         return clubs;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public List<ClubCategory> listClubCategory() {
+
+
+
         List<ClubCategory>  clubCategories = new ArrayList<>();
         clubCategories.add(new ClubCategory(UUID.randomUUID(),"Sports","https://media.npr.org/assets/img/2020/06/10/gettyimages-200199027-001_wide-3ff0f063a2bf1ab01550d3508c816bc43009d215.jpg?s=1400"));
         clubCategories.add(new ClubCategory(UUID.randomUUID(),"Academic","https://media.npr.org/assets/img/2020/06/10/gettyimages-200199027-001_wide-3ff0f063a2bf1ab01550d3508c816bc43009d215.jpg?s=1400"));
@@ -45,6 +54,15 @@ public class ClubImp implements ClubService{
 
     @Override
     public Club findClubById(UUID id) {
-        return null;
+
+        return new Club(UUID.randomUUID(),"Football club",23.01,"des....", "April 2,2022","https://m.media-amazon.com/images/I/51KM6J9JUBL._AC_SL1024_.jpg");
+    }
+
+    @Override
+    public ClubCheckout findClubToCheckout(UUID id) {
+        return new ClubCheckout(
+                "Sports",
+                findClubById(id)
+        );
     }
 }

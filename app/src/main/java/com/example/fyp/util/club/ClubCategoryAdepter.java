@@ -33,8 +33,8 @@ public class ClubCategoryAdepter extends ArrayAdapter<ClubCategory> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_custom_club_category, parent, false);
         ClubCategory clubCategory = getItem(position);
-        setClubTitle(clubCategory.getClubTitle(), convertView);
-        setClubImageCover(clubCategory.getImageCover(), convertView);
+        setClubTitle(clubCategory.getClubType(), convertView);
+        setClubImageCover(clubCategory.getImageIcon(), convertView);
         onClickCategory(convertView, clubCategory);
         return convertView;
     }
@@ -43,8 +43,8 @@ public class ClubCategoryAdepter extends ArrayAdapter<ClubCategory> {
         convertView.setOnClickListener(view -> {
             Intent intent = new Intent(getContext(), ClubCategoryDetailScreen.class);
             intent.putExtra("id", clubCategory.getId());
-            intent.putExtra("title", clubCategory.getClubTitle());
-            intent.putExtra("imageUrl", clubCategory.getImageCover());
+            intent.putExtra("title", clubCategory.getClubType());
+            intent.putExtra("imageUrl", clubCategory.getImageIcon());
             getContext().startActivity(intent);
         });
     }

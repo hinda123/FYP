@@ -43,8 +43,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter <ClubViewHolder>{
         holder.setClub(clubs.get(position));
         holder.onClick((view, club) -> {
             Toast.makeText(context, ""+club.getTitle(), Toast.LENGTH_SHORT).show();
-            //TODO go to club detail page
             Intent intent = new Intent(view.getContext(), ClubDesc.class);
+            intent.putExtra("id", club.getId());
             view.getContext().startActivity(intent);
         });
     }

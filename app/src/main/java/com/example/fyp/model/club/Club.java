@@ -43,4 +43,16 @@ public class Club {
     public String getImageIcon() {
         return imageIcon;
     }
+
+    @Override
+    public String toString() {
+        return "Club{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", date='" + date + '\'' +
+                ", imageIcon='" + imageIcon + '\'' +
+                '}';
+    }
 }

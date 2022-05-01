@@ -3,26 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PaymentForm">
+    tools:context=".screans.PaymentForm">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="108dp"
+        android:layout_height="match_parent"
         android:background="@color/white"
+        android:paddingBottom="10dp"
         android:orientation="vertical">
 
 
         <ImageView
+            android:id="@+id/cp_imageCover"
             android:layout_width="match_parent"
             android:layout_height="272dp"
             android:padding="10dp"
             android:src="@drawable/sports" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:orientation="vertical">
+
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -33,10 +41,11 @@
                 android:text="Club Category"
                 android:textAlignment="textStart"
                 android:textColor="#6D706F"
-                android:textSize="25sp"
+                android:textSize="22dp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/cp_clubCategory"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
@@ -46,9 +55,8 @@
                 android:text="Religious"
                 android:textColor="#656868"
                 android:textSize="20sp" />
-
-
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,10 +73,11 @@
                 android:text="Club Name"
                 android:textAlignment="textStart"
                 android:textColor="#6D706F"
-                android:textSize="25sp"
+                android:textSize="22dp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/cp_clubTitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
@@ -97,10 +106,11 @@
                 android:text="Club Date"
                 android:textAlignment="textStart"
                 android:textColor="#6D706F"
-                android:textSize="25sp"
+                android:textSize="22dp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/cp_clubDate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
@@ -129,10 +139,11 @@
                 android:text="Club Price"
                 android:textAlignment="textStart"
                 android:textColor="#6D706F"
-                android:textSize="25sp"
+                android:textSize="22dp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/cp_clubPrice"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"

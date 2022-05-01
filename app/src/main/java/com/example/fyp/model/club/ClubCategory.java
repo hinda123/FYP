@@ -2,27 +2,37 @@ package com.example.fyp.model.club;
 import java.util.UUID;
 
 public class ClubCategory {
-    private final UUID id;
-    private final String clubTitle;
-    private final String imageCover;
+    private  UUID id;
+    private  String clubType;
+    private  String imageIcon;
 
+    public ClubCategory() {
+    }
 
-    public ClubCategory(UUID id, String clubTitle, String imageCover) {
+    public ClubCategory(UUID id, String clubType, String imageIcon) {
         this.id = id;
-        this.clubTitle = clubTitle;
-        this.imageCover = imageCover;
+        this.clubType = clubType;
+        this.imageIcon = imageIcon;
     }
 
     public UUID getId() {
         return id;
     }
 
-    public String getClubTitle() {
-        return clubTitle;
+    public String getClubType() {
+        return clubType;
     }
 
-    public String getImageCover() {
-        return imageCover;
+    public String getImageIcon() {
+        return imageIcon;
     }
 
+    @Override
+    public String toString() {
+        return "ClubCategory{" +
+                "id=" + id +
+                ", clubType='" + clubType + '\'' +
+                ", imageIcon='" + imageIcon + '\'' +
+                '}';
+    }
 }
