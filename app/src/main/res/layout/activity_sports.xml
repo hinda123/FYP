@@ -59,23 +59,6 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/headerfile"
-        android:visibility="invisible"
         app:menu="@menu/sidemenu" />
-    <RelativeLayout
-        android:id="@+id/ccd_progress_con"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        android:visibility="visible"
-        android:orientation="vertical">
-
-        <ProgressBar
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:visibility="visible" />
-
-    </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -2,6 +2,7 @@ package com.example.fyp.util.club;
 
 import android.os.Build;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fyp.R;
 import com.example.fyp.model.club.Club;
+import com.squareup.picasso.Picasso;
 
 import java.util.function.BiConsumer;
 
@@ -26,7 +28,8 @@ public class ClubViewHolder extends RecyclerView.ViewHolder {
         setText(club.getTitle(), convertView.findViewById(R.id.clubTitle));
         setText("$" + club.getPrice(), convertView.findViewById(R.id.clubPrice));
         setText(club.getDate(), convertView.findViewById(R.id.clubDate));
-        DisplayUtil.networkImage(convertView.getContext(),convertView.findViewById(R.id.clubImage),club.getImageCover());
+        ImageView imageView = convertView.findViewById(R.id.clubImage);
+        Picasso.with(convertView.getContext()).load(club.getImageIcon()).into(imageView);
         this.club = club;
     }
 

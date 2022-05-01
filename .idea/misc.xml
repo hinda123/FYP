@@ -23,26 +23,6 @@
         <entry key="..\:/Users/hinda/Desktop/FYP-LAST/FYP-FYP/FYP-FYP/app/src/main/res/layout/activity_sports2.xml" value="0.25" />
         <entry key="..\:/Users/hinda/Desktop/FYP-LAST/FYP-FYP/FYP-FYP/app/src/main/res/layout/custom_design.xml" value="0.25" />
         <entry key="..\:/Users/hinda/Desktop/FYP-LAST/FYP-FYP/FYP-FYP/app/src/main/res/layout/headerfile.xml" value="0.25" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_about_screen.xml" value="0.234375" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_academic.xml" value="0.234375" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_arts.xml" value="0.24583333333333332" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_club_desc.xml" value="0.24583333333333332" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_cultural.xml" value="0.234375" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_custom_club_category.xml" value="0.234375" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_custom_design_event.xml" value="0.2" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_event_screen.xml" value="0.24583333333333332" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_login.xml" value="0.234375" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_main.xml" value="0.234375" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_main_screen.xml" value="0.234375" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_payment_form.xml" value="0.176" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_setting_screen.xml" value="0.264" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_special.xml" value="0.24583333333333332" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_sports.xml" value="0.24583333333333332" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/activity_sports2.xml" value="0.24583333333333332" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/custom_design.xml" value="0.24583333333333332" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/layout/headerfile.xml" value="0.24583333333333332" />
-        <entry key="..\:/Users/hinda/Desktop/FYP-master/FYP-master/app/src/main/res/menu/sidemenu.xml" value="0.264" />
         <entry key="..\:/Users/hinda/FYP/app/src/main/res/drawable/main_screen.xml" value="0.1" />
         <entry key="..\:/Users/hinda/FYP/app/src/main/res/drawable/selector.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/hinda/FYP/app/src/main/res/font/font.xml" value="0.13703703703703704" />
@@ -64,18 +44,11 @@
         <entry key="..\:/Users/hinda/FYP/app/src/main/res/layout/headerfile.xml" value="0.25" />
         <entry key="..\:/Users/hinda/FYP/app/src/main/res/menu/menu_navigation.xml" value="0.16" />
         <entry key="..\:/Users/hinda/FYP/app/src/main/res/menu/sidemenu.xml" value="0.4" />
-        <entry key="app/src/main/res/layout/activity_club_desc.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/layout/activity_custom_club_category.xml" value="0.2767210144927536" />
-        <entry key="app/src/main/res/layout/activity_event_screen.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main_screen.xml" value="0.3333333333333333" />
-        <entry key="app/src/main/res/layout/activity_payment_form.xml" value="0.2826086956521739" />
-        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/layout/activity_sports.xml" value="0.25933609958506226" />
         <entry key="app/src/main/res/layout/activity_sports2.xml" value="0.23278985507246377" />
         <entry key="app/src/main/res/layout/custom_design.xml" value="0.6666666666666666" />
-        <entry key="app/src/main/res/layout/headerfile.xml" value="0.1" />
       </map>
     </option>
   </component>

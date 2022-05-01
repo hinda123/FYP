@@ -6,127 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".screans.EventScreen">
 
-    <ScrollView
-        android:id="@+id/ev_scroller"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical"
-            android:paddingBottom="20dp">
-
-            <TextView
-                android:id="@+id/header_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/bunge"
-                android:paddingHorizontal="10dp"
-                android:text="Upcomming Events"
-                android:textColor="#009688"
-                android:textSize="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/cd_imageCover"
-                android:layout_width="match_parent"
-                android:layout_height="203dp"
-                android:background="#000000"
-                android:padding="10dp"
-                 />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="?android:attr/listDivider" />
-
-
-            <TextView
-                android:id="@+id/cd_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:paddingHorizontal="10dp"
-                android:text="International Cuture Night"
-                android:textColor="#009688"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/cd_price"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right"
-                android:paddingTop="10dp"
-                android:paddingRight="10dp"
-                android:text="20 April 2022"
-                android:textAlignment="gravity"
-                android:textColor="#009688"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:ignore="RtlHardcoded" />
-
-            <TextView
-                android:id="@+id/cd_desc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:lineSpacingExtra="15dp"
-                android:padding="10dp"
-                android:paddingTop="80dp"
-                android:text="It's finally happening! It's been a while, but the International Students' Bureau is excited to announce that
-✨ International Cultural Night ✨
-is back and will be held physically this year!
-
-It's finally happening! It's been a while, but the International Students' Bureau is excited to announce that
-✨ International Cultural Night ✨
-is back and will be held physically this year!
-
-
-It's finally happening! It's been a while, but the International Students' Bureau is excited to announce that
-✨ International Cultural Night ✨
-is back and will be held physically this year!
-
-
-It's finally happening! It's been a while, but the International Students' Bureau is excited to announce that
-✨ International Cultural Night ✨
-is back and will be held physically this year!
-
-
-It's finally happening! It's been a while, but the International Students' Bureau is excited to announce that
-✨ International Cultural Night ✨
-is back and will be held physically this year!
-
-It's finally happening! It's been a while, but the International Students' Bureau is excited to announce that
-✨ International Cultural Night ✨
-is back and will be held physically this year!
-
-
-
-"
-                android:textColor="#6A6A6A"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.221" />
-
-        </LinearLayout>
-
-    </ScrollView>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnNav"
+        android:layout_marginBottom="384dp"
+        android:text="Event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btnNav"

@@ -1,11 +1,9 @@
 package com.example.fyp.screans;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Pair;
@@ -44,7 +42,6 @@ public class SplashScreen extends AppCompatActivity {
         logo.setAnimation(bottomAnim);
 
         new Handler().postDelayed(new Runnable() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void run() {
                 Intent intent = new Intent(SplashScreen.this, Login.class);
@@ -56,7 +53,6 @@ public class SplashScreen extends AppCompatActivity {
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SplashScreen.this,Pairs);
 
                 startActivity(intent,options.toBundle());
-                finish();
             }
         }, SPLASH_SCREEN);
     }
