@@ -48,11 +48,11 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/username"
+            android:id="@+id/si_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="Email"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:transitionName="username_trans"
@@ -69,7 +69,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password"
+            android:id="@+id/si_password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,24 +95,17 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/background"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="right"
-            android:text="Forgot Password?"
-            android:background="@color/cardview_shadow_end_color"
-            android:textColor="#0CA789"/>
+
 
 
         <Button
-            android:id="@+id/loginBtn"
+            android:id="@+id/si_loginBtn"
             android:layout_width="375dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#009688"
             android:elevation="0dp"
+            android:layout_marginTop="30dp"
             android:text="Login"
             android:textColor="#FFFFFF"
             android:transitionName="button_trans"

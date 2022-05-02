@@ -26,7 +26,7 @@ public class ClubViewHolder extends RecyclerView.ViewHolder {
         setText(club.getTitle(), convertView.findViewById(R.id.clubTitle));
         setText("$" + club.getPrice(), convertView.findViewById(R.id.clubPrice));
         setText(club.getDate(), convertView.findViewById(R.id.clubDate));
-        DisplayUtil.networkImage(convertView.getContext(),convertView.findViewById(R.id.clubImage),club.getImageIcon());
+        DisplayUtil.networkImage(convertView.getContext(),convertView.findViewById(R.id.clubImage),club.getImageCover());
         this.club = club;
     }
 

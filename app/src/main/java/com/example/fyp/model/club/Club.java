@@ -1,23 +1,25 @@
 package com.example.fyp.model.club;
 
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Club {
-    private final UUID id;
-    private final String title;
-    private final Double price;
-    private final String description;
-    private final String date;
-    private final String imageIcon;
+    private  UUID id;
+    private  String title;
+    private  Double price;
+    private  String description;
+    private  String date;
+    private  String imageCover;
 
-    public Club(UUID id, String title, Double price, String description, String date, String imageIcon) {
+    public Club() {
+    }
+
+    public Club(UUID id, String title, Double price, String description, String date, String imageCover) {
         this.id = id;
         this.title = title;
         this.price = price;
         this.description = description;
         this.date = date;
-        this.imageIcon = imageIcon;
+        this.imageCover = imageCover;
     }
 
     public UUID getId() {
@@ -40,8 +42,8 @@ public class Club {
         return date;
     }
 
-    public String getImageIcon() {
-        return imageIcon;
+    public String getImageCover() {
+        return imageCover;
     }
 
     @Override
@@ -52,7 +54,7 @@ public class Club {
                 ", price=" + price +
                 ", description='" + description + '\'' +
                 ", date='" + date + '\'' +
-                ", imageIcon='" + imageIcon + '\'' +
+                ", imageIcon='" + imageCover + '\'' +
                 '}';
     }
 }

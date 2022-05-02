@@ -2,14 +2,17 @@ package com.example.fyp.screans;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.Button;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -18,21 +21,22 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fyp.R;
-import com.example.fyp.service.ClubImp;
-import com.example.fyp.service.ClubService;
-import com.example.fyp.util.club.ClubServiceUtil;
+import com.example.fyp.model.club.Club;
+import com.example.fyp.util.api.FetchApi;
 import com.example.fyp.util.club.RecyclerAdapter;
 import com.google.android.material.navigation.NavigationView;
 import com.squareup.picasso.Picasso;
 
+import java.util.Arrays;
 import java.util.Objects;
-import java.util.UUID;
+import java.util.function.Consumer;
 
 public class ClubCategoryDetailScreen extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+    private Bundle bundle;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -41,26 +45,38 @@ public class ClubCategoryDetailScreen extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ClubService clubService = ClubServiceUtil.createClubService();
         setContentView(R.layout.activity_sports);
-        Bundle bundle = getIntent().getExtras();
+        bundle = getIntent().getExtras();
         Objects.requireNonNull(getSupportActionBar()).hide();
         changeHeader(bundle);
-        recyclerView(clubService, (UUID) bundle.get("id"));
+        recyclerView(bundle.getString("title"));
         drawer();
         navigate();
 
     }
 
-    private void recyclerView(ClubService clubService, UUID id) {
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private void recyclerView(String clubType) {
+        RelativeLayout progress = findViewById(R.id.ccd_progress_con);
+        FetchApi.get(
+                "/clubs/club-infos?clubType=" + clubType,
+                Club[].class,
+                isLoading -> progress.setVisibility(isLoading ? View.VISIBLE : View.INVISIBLE),
+                onResult,
+                System.out::println
+        );
+    }
+
+    private final Consumer<Club[]> onResult = clubs -> {
         RecyclerView recyclerView = findViewById(R.id.recycleview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        RecyclerAdapter adapter = new RecyclerAdapter(this, clubService.listAllClubsByClubCategory(id));
+        RecyclerAdapter adapter = new RecyclerAdapter(this, bundle.getString("title"), Arrays.asList(clubs));
         recyclerView.setAdapter(adapter);
-    }
+    };
 
     private void drawer() {
         drawerLayout = findViewById(R.id.drawer_layout);

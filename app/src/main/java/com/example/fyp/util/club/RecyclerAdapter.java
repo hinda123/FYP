@@ -24,10 +24,12 @@ import java.util.List;
 public class RecyclerAdapter extends RecyclerView.Adapter <ClubViewHolder>{
     private final List<Club> clubs;
     private final Context context;
+    private final String clubCategory;
 
-    public RecyclerAdapter(Context context,List<Club> clubs) {
+    public RecyclerAdapter(Context context,String clubCategory,List<Club> clubs) {
         this.clubs = clubs;
         this.context = context;
+        this.clubCategory = clubCategory;
     }
     @NonNull
     @Override
@@ -45,6 +47,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter <ClubViewHolder>{
             Toast.makeText(context, ""+club.getTitle(), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(view.getContext(), ClubDesc.class);
             intent.putExtra("id", club.getId());
+            intent.putExtra("category",clubCategory);
             view.getContext().startActivity(intent);
         });
     }
