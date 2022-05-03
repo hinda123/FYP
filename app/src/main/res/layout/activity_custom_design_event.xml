@@ -1,155 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:elevation="0dp"
     tools:context=".CustomDesignEvent">
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:layout_marginBottom="1dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+
+        >
+        <ImageView
+            android:id="@+id/ev_imageCover"
+            android:layout_width="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_height="254dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/ev_title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="Upcoming events"
-            android:layout_gravity="center"
-            android:fontFamily="@font/bunge"
-            android:textAllCaps="true"
-            android:textColor="@color/colorPrimary"
-            android:textSize="25sp" />
+            android:textColor="#009688"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:text="Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/custoDesignEvent"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="0dp"
-            android:background="@drawable/ic_baseline_info">
+        <TextView
+            android:id="@+id/ev_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="May 2, 2022"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="20dp"
+            android:textAlignment="gravity"
+            android:textColor="#808080"
+            android:textSize="18sp"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
 
-            <ImageView
-                android:id="@+id/cd_img_video"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="@drawable/music"
-                android:padding="10dp" />
-
-            <TextView
-                android:id="@+id/cd_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:paddingHorizontal="10dp"
-                android:paddingTop="200dp"
-                android:text="International Cuture Night"
-                android:textColor="#009688"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/cd_date_events"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:paddingTop="280dp"
-                android:paddingRight="10dp"
-                android:text="20 April 2022"
-                android:textAlignment="gravity"
-                android:textColor="#009688"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:ignore="RtlHardcoded" />
-
-            <TextView
-                android:id="@+id/cd_evets_desc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:lineSpacingExtra="15dp"
-                android:paddingTop="310dp"
-                android:text="It's finally happening! It's been a while, but the International Students' Bureau is excited to announce that
-✨ International Cultural Night ✨
-is back and will be held physically this year!
-
-"
-                android:textColor="#6A6A6A"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.221" />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="0dp"
-            android:background="@drawable/ic_baseline_info">
-
-            <ImageView
-                android:layout_width="409dp"
-                android:layout_height="193dp"
-                android:background="@drawable/music"
-                android:padding="10dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:paddingHorizontal="10dp"
-                android:paddingTop="200dp"
-                android:text="International Cuture Night"
-                android:textColor="#009688"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right"
-                android:paddingTop="280dp"
-                android:paddingRight="10dp"
-                android:text="20 April 2022"
-                android:textAlignment="gravity"
-                android:textColor="#009688"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:ignore="RtlHardcoded" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:lineSpacingExtra="15dp"
-                android:paddingTop="310dp"
-                android:text="It's finally happening! It's been a while, but the International Students' Bureau is excited to announce that
-✨ International Cultural Night ✨
-is back and will be held physically this year!
-
-"               android:textColor="#6A6A6A"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.221" />
-        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/ev_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="15dp"
+            android:text=""
+            android:textColor="#6A6A6A"
+            android:textSize="20sp"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.221" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="20dp"
+            android:background="?android:attr/listDivider" />
     </LinearLayout>
-</LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

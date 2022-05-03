@@ -1,4 +1,4 @@
-package com.example.fyp.util.club;
+package com.example.fyp.util.adapters;
 
 import com.example.fyp.service.ClubImp;
 import com.example.fyp.service.ClubService;

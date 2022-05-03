@@ -7,26 +7,27 @@
     tools:context=".screans.AboutScreen">
 
     <ImageView
-        android:layout_width="328dp"
-        android:layout_height="372dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_gravity="center"
-        android:layout_marginEnd="51dp"
+        android:layout_marginEnd="0dp"
         android:layout_marginBottom="15dp"
         android:scaleType="centerCrop"
         android:src="@drawable/bgimg"
+
         app:layout_collapseMode="parallax" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="126dp"
+        android:layout_marginBottom="96dp"
         android:lineSpacingExtra="15dp"
         android:paddingLeft="20dp"
         android:paddingTop="20dp"
-        android:text="Designed for University of Nottingham UniversityvMalaysia. it is a mobile solution where students can view list of clubs and can join the club they are interested in by filling in the form with their details."
-        android:textSize="20dp"
+        android:text="Clubspay is an mobile application Designed for University of Nottingham University Malaysia students and club manager. It is a mobile application where students from the University of Nottingham Malaysia are able to register for the clubs and societies in the University of Nottingham Malaysia. With the application, Students are able to pay the registration fee via online through bank account or even by cash. The  application provides event updates about the events in University of Nottingham Malaysia. These events include daily, weekly or monthly events."
+        android:textSize="15dp"
         android:textStyle="italic"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,26 +1,29 @@
 package com.example.fyp.model.event;
 
-import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class Event {
 
-    private final Long id ;
-    private final String title;
-    private final String description;
-    private final String url;
-    private final MediaType mediaType;
-    private final LocalDateTime dateTime;
+    private  UUID id;
+    private  String title;
+    private  String description;
+    private  String media;
+    private  MediaType mediaType;
+    private  String postedAt;
 
-    public Event(Long id, String title, String description, String url, MediaType mediaType, LocalDateTime dateTime) {
+    public Event() {
+    }
+
+    public Event(UUID id, String title, String description, String media, MediaType mediaType, String postedAt) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.url = url;
+        this.media = media;
         this.mediaType = mediaType;
-        this.dateTime = dateTime;
+        this.postedAt = postedAt;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
@@ -32,15 +35,27 @@ public class Event {
         return description;
     }
 
-    public String getUrl() {
-        return url;
+    public String getMedia() {
+        return media;
     }
 
     public MediaType getMediaType() {
         return mediaType;
     }
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
+    public String getPostedAt() {
+        return postedAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", media='" + media + '\'' +
+                ", mediaType=" + mediaType +
+                ", postedAt='" + postedAt + '\'' +
+                '}';
     }
 }

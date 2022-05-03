@@ -16,6 +16,7 @@
             android:layout_height="match_parent"
             android:background="@color/white"
             android:orientation="vertical"
+            android:id="@+id/cd_container"
             android:paddingBottom="20dp">
 
 
@@ -23,7 +24,7 @@
                 android:id="@+id/cd_imageCover"
                 android:layout_width="match_parent"
                 android:layout_height="203dp"
-                android:padding="10dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/sports" />
 
             <TextView
@@ -108,7 +109,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView3" />
+               />
 
 
         </LinearLayout>

@@ -15,12 +15,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fyp.R;
 import com.example.fyp.model.club.Club;
+import com.example.fyp.util.TokenConfig;
 import com.example.fyp.util.api.FetchApi;
-import com.example.fyp.util.club.DisplayUtil;
+import com.example.fyp.util.adapters.DisplayUtil;
 
 import java.util.UUID;
 import java.util.function.Consumer;
 
+@RequiresApi(api = Build.VERSION_CODES.N)
 public class ClubDesc extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -32,28 +34,22 @@ public class ClubDesc extends AppCompatActivity {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void displayCLub(Club club) {
-        DisplayUtil.networkImage(this, findViewById(R.id.cd_imageCover), club.getImageCover());
-        setText(club.getTitle(), findViewById(R.id.cd_title));
-        setText(club.getDate(), findViewById(R.id.cd_date));
-        setText("RM" + club.getPrice(), findViewById(R.id.cd_price));
-        setHtml(Html.fromHtml(club.getDescription()), findViewById(R.id.cd_desc));
+        DisplayUtil.networkImage(this, findViewById(R.id.cd_imageCover),FetchApi.getImageUrl(club.getImageCover()));
+        View view = findViewById(R.id.cd_container);
+        DisplayUtil.setTextToTextview(club.getTitle(), R.id.cd_title,view);
+        DisplayUtil.setTextToTextview(club.getDate(), R.id.cd_date,view);
+        DisplayUtil.setTextToTextview("RM" + club.getPrice(), R.id.cd_price,view);
+        DisplayUtil.setHTMLToTextview(Html.fromHtml(club.getDescription()), R.id.cd_desc,view);
     }
-
-    private void setText(String text, TextView textView) {
-        textView.setText(text);
-    }
-
-    private void setHtml(Spanned spanned, TextView textView) {
-        textView.setText(spanned);
-    }
-
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void getClub() {
+        FetchApi fetchApi = new FetchApi(new TokenConfig(this));
         RelativeLayout progress = findViewById(R.id.cd_progress_con);
         UUID id = (UUID) getIntent().getExtras().get("id");
-        FetchApi.get(
+        fetchApi.get(
                 "/clubs/club-info?id=" + id.toString(),
                 Club.class,
                 isLoading -> progress.setVisibility(isLoading ? View.VISIBLE : View.INVISIBLE),

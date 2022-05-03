@@ -18,7 +18,7 @@
             android:name=".screans.PaymentForm"
             android:exported="false" />
         <activity
-            android:name=".util.club.custom_club_category"
+            android:name=".util.adapters.custom_club_category"
             android:exported="false" />
         <activity
             android:name=".screans.ClubDesc"

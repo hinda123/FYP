@@ -1,4 +1,4 @@
-package com.example.fyp.util.club;
+package com.example.fyp.util.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,10 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fyp.R;
 import com.example.fyp.model.club.Club;
-import com.example.fyp.screans.ClubCategoryDetailScreen;
 import com.example.fyp.screans.ClubDesc;
-import com.example.fyp.screans.Login;
-import com.example.fyp.screans.MainScreen;
 
 import java.util.List;
 
@@ -31,6 +28,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter <ClubViewHolder>{
         this.context = context;
         this.clubCategory = clubCategory;
     }
+
+
     @NonNull
     @Override
     public ClubViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -8,7 +8,9 @@ import static com.example.fyp.util.Validation.validatePassword;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -16,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fyp.R;
 import com.example.fyp.model.student.Student;
+import com.example.fyp.util.TokenConfig;
 import com.example.fyp.util.api.FetchApi;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -51,11 +54,12 @@ public class SignUp extends AppCompatActivity {
 
     private void onSignUp() {
         Button signUp = findViewById(R.id.su_signupBtn);
+        FetchApi fetchApi = new FetchApi(new TokenConfig(this));
         signUp.setOnClickListener(view -> {
             try {
                 Student student = readForm();
-                FetchApi.post("/auth/sign-up", student, isLoading -> {
-                        },
+             fetchApi.post("/auth/sign-up", student,
+                        isLoading ->{},
                         response -> {
                             Toast.makeText(this, response, Toast.LENGTH_SHORT).show();
                             goToLogin();

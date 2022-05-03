@@ -6,6 +6,7 @@
     tools:context=".screans.PaymentForm">
 
     <LinearLayout
+        android:id="@+id/cp_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -16,9 +17,10 @@
         <ImageView
             android:id="@+id/cp_imageCover"
             android:layout_width="match_parent"
-            android:layout_height="272dp"
-            android:padding="10dp"
+            android:layout_height="210dp"
+            android:scaleType="fitXY"
             android:src="@drawable/sports" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -164,8 +166,10 @@
             android:paddingHorizontal="15dp"
             android:orientation="vertical">
 
+
+
             <Button
-                android:id="@+id/payOnline"
+                android:id="@+id/cp_payWithPaypal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -178,7 +182,7 @@
                 tools:ignore="TextContrastCheck" />
 
             <Button
-                android:id="@+id/payCash"
+                android:id="@+id/cp_payWithCash"
                 android:layout_width="275dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

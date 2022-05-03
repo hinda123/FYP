@@ -1,4 +1,4 @@
-package com.example.fyp.util.club;
+package com.example.fyp.util.adapters;
 
 import androidx.appcompat.app.AppCompatActivity;
 
