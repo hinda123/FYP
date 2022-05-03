@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home"
+            android:title="Home"/>
+
+        <item android:id="@+id/nav_events"
+            android:icon="@drawable/ic_baseline_calendar"
+            android:title="Events"/>
+
+        <item android:id="@+id/nav_about"
+            android:icon="@drawable/ic_baseline_info"
+            android:title="About"/>
+
+        <item android:id="@+id/nav_help"
+            android:icon="@drawable/ic_baseline_help"
+            android:title="Help"/>
+
+    </group>
+
+    <group
+
+        android:checkableBehavior="single">
+
+        <item android:title="Athentication">
+
+            <menu>
+                <item android:id="@+id/nav_login"
+                    android:icon="@drawable/ic_baseline_login"
+                    android:title="Login"/>
+
+                <item android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_baseline_logout"
+                    android:title="Logout"/>
+
+            </menu>
+
+
+        </item>
+
+    </group>
+
+</menu>

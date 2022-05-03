@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fyp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FYP"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".CustomDesignEvent"
+            android:exported="false" />
+        <activity
+            android:name=".screans.PaymentForm"
+            android:exported="false" />
+        <activity
+            android:name=".util.club.custom_club_category"
+            android:exported="false" />
+        <activity
+            android:name=".screans.ClubDesc"
+            android:exported="false" />
+        <activity
+            android:name=".screans.ClubCategoryDetailScreen"
+            android:exported="false" />
+        <activity
+            android:name=".screans.EventScreen"
+            android:exported="false" />
+        <activity
+            android:name=".screans.AboutScreen"
+            android:exported="false" />
+        <activity
+            android:name=".screans.SettingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".screans.MainScreen"
+            android:exported="false" />
+        <activity
+            android:name=".screans.SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".screans.Login"
+            android:exported="false" />
+        <activity
+            android:name=".screans.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
