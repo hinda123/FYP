@@ -34,15 +34,15 @@
 
             <ImageView
                 android:id="@+id/cd_img_video"
-                android:layout_width="409dp"
-                android:layout_height="193dp"
-                android:background="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/music"
                 android:padding="10dp" />
 
             <TextView
                 android:id="@+id/cd_title"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:paddingHorizontal="10dp"
                 android:paddingTop="200dp"
@@ -58,7 +58,7 @@
             <TextView
                 android:id="@+id/cd_date_events"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="right"
                 android:paddingTop="280dp"
                 android:paddingRight="10dp"
@@ -72,7 +72,7 @@
             <TextView
                 android:id="@+id/cd_evets_desc"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:lineSpacingExtra="15dp"
                 android:paddingTop="310dp"
@@ -101,7 +101,7 @@ is back and will be held physically this year!
             <ImageView
                 android:layout_width="409dp"
                 android:layout_height="193dp"
-                android:background="#000000"
+                android:background="@drawable/music"
                 android:padding="10dp" />
 
             <TextView

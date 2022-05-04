@@ -128,13 +128,6 @@ public class ClubCategoryDetailScreen extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     break;
 
-                case R.id.nav_login:
-                    startActivity(new Intent(getApplicationContext()
-                            , Login.class));
-                    overridePendingTransition(0, 0);
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                    break;
-
                 case R.id.nav_logout: //can change to id of the mainscreen or the home in menu navigation
                     Log.i("MENU_DRAWER_TAG", "logout item is clicked");
                     tokenConfig.removeToken();

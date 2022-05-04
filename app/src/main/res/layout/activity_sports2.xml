@@ -42,12 +42,12 @@
 
                 <ImageView
                     android:id="@+id/sport1"
-                    android:layout_width="91dp"
-                    android:layout_height="65dp"
+                    android:layout_width="117dp"
+                    android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="293dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="294dp"
+                    android:layout_marginBottom="0dp"
                     android:src="@drawable/ic_baseline_info" />
 
                 <TextView
@@ -107,13 +107,13 @@
 
                 <ImageView
                     android:id="@+id/sport2"
-                    android:layout_width="91dp"
-                    android:layout_height="65dp"
+                    android:layout_width="119dp"
+                    android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
 
                     android:layout_alignParentBottom="true"
                     android:layout_marginEnd="293dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="0dp"
                     android:src="@drawable/ic_baseline_info" />
 
                 <TextView
